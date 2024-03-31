@@ -9,6 +9,7 @@ import {
   Umbrella,
 } from "@phosphor-icons/react";
 import { Box, Tab, Tabs } from "@mui/material";
+import Properties from "./Properties";
 
 CardView.propTypes = {
   value: PropTypes.number,
@@ -56,7 +57,9 @@ export default function CardView(props) {
             <Tab label="Amazing Pool" icon={<SwimmingPool size={20} />} />
           </Tabs>
         </Box>
-        <CustomTabPanel value={props.value} index={0}></CustomTabPanel>
+        <CustomTabPanel value={props.value} index={0}>
+            <Properties />
+        </CustomTabPanel>
       </Box>
     </div>
   );

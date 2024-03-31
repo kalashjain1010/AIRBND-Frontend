@@ -4,7 +4,7 @@ import { SearchResults } from "../section/Search";
 const Home = () => {
   return (
     <>
-    <Box sx={{ width: "100%", bgcolor:"red"}}>
+    <Box sx={{ width: "100%"}}>
     
         <Box>
           <Grid container >

@@ -7,6 +7,11 @@ import CardView from "./CardView";
 function Result() {
   const [view, setView] = useState("card");
   const isDesktop = useResponsive("up", "md");
+  const [value, setValue] = useState(0);
+
+  const handleChangeTab = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <Stack sx={{ width: "100%", px: 3, py: 2 }} spacing={2}>
       <Box>
@@ -65,7 +70,7 @@ function Result() {
       </Box>
        
        :
-       <CardView />
+       <CardView value={value}  handleChangeTab={handleChangeTab} />
         }     
     </Stack>
   );
