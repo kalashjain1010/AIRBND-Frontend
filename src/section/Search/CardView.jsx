@@ -58,7 +58,22 @@ export default function CardView(props) {
           </Tabs>
         </Box>
         <CustomTabPanel value={props.value} index={0}>
-            <Properties />
+          <Properties tab="National Parks" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={1}>
+          {/* <Properties tab="Castle" /> */}
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={2}>
+          <Properties tab="Beach" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={3}>
+          <Properties tab="Tropical" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={4}>
+          <Properties tab="Rooms" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={5}>
+          <Properties tab="Amazing Pool" />
         </CustomTabPanel>
       </Box>
     </div>
