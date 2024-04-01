@@ -8,7 +8,7 @@ import {
   MapControlScale,
 } from "../../components/map";
 
-const Map = ({ data, ...others }) => {
+const Map = ({ data , ...others }) => {
   const [tooltip, setTooltip] = useState(null);
   const [viewport, setViewport] = useState({
     zoom: 2,
