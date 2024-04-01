@@ -40,10 +40,10 @@ function CustomTabPanel(props) {
 export default function CardView(props) {
   return (
     <div>
-      <Box sx={{ width: "100%" }}>
+      <Box sx={{ width: "50%" }}>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Tabs
-            varient="scrollable"
+            variant="scrollable"
             scrollButtons="auto"
             allowScrollButtonsMobile
             value={props.value}
@@ -55,6 +55,13 @@ export default function CardView(props) {
             <Tab label="Tropical" icon={<TreePalm size={20} />} />
             <Tab label="Rooms" icon={<Bed size={20} />} />
             <Tab label="Amazing Pool" icon={<SwimmingPool size={20} />} />
+            <Tab label="GG place Parks" icon={<Park size={20} />} />
+            <Tab label="new Land" icon={<CastleTurret size={20} />} />
+            <Tab label="river" icon={<Umbrella size={20} />} />
+            <Tab label="Drafts" icon={<TreePalm size={20} />} />
+            <Tab label="World" icon={<Bed size={20} />} />
+            <Tab label="Craze dip Pool" icon={<SwimmingPool size={20} />} />
+           
           </Tabs>
         </Box>
         <CustomTabPanel value={props.value} index={0}>
@@ -62,6 +69,7 @@ export default function CardView(props) {
         </CustomTabPanel>
         <CustomTabPanel value={props.value} index={1}>
           {/* <Properties tab="Castle" /> */}
+          no data found
         </CustomTabPanel>
         <CustomTabPanel value={props.value} index={2}>
           <Properties tab="Beach" />
@@ -73,8 +81,34 @@ export default function CardView(props) {
           <Properties tab="Rooms" />
         </CustomTabPanel>
         <CustomTabPanel value={props.value} index={5}>
+          <Properties tab="dsfdf Pool" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={6}>
           <Properties tab="Amazing Pool" />
         </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={7}>
+          <Properties tab="National Parks" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={8}>
+          {/* <Properties tab="Castle" /> */}
+          no data found
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={9}>
+          <Properties tab="Beach" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={10}>
+          <Properties tab="Tropical" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={11}>
+          <Properties tab="Rooms" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={12}>
+          <Properties tab="dsfdf Pool" />
+        </CustomTabPanel>
+        <CustomTabPanel value={props.value} index={13}>
+          <Properties tab="Amazing Pool" />
+        </CustomTabPanel>
+      
       </Box>
     </div>
   );

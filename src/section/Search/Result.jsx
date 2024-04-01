@@ -3,6 +3,16 @@ import { Columns, MapTrifold } from "@phosphor-icons/react";
 import React, { useState } from "react";
 import useResponsive from "../../hooks/useResponsive";
 import CardView from "./CardView";
+import Map from "./Map";
+import {countries as COUNTRIES} from "../../_mock/map/countries";
+import { MAPBOX_API } from "../../config";
+
+const baseSettings = {
+  mapBoxApiAccessToken: "pk.eyJ1IjoiY29kaW5nbW9uayIsImEiOiJjbHFra3JiNzYwaGh5MnJwOThpN3ZyaXhwIn0.4y7jYQgHTtZgTP3NoKndaQ",
+  weidth: "100%",
+  height: "100%",
+  minZoom: 1,
+}
 
 function Result() {
   const [view, setView] = useState("card");
@@ -32,46 +42,15 @@ function Result() {
             xs={12}
           >
             <Stack direction={"row"} alignItems={"center"} spacing={2}>
-              <Chip
-                onClick={() => {
-                  setView("map");
-                }}
-                sx={{ cursor: "pointer", p: 1 }}
-                color="primary"
-                variant={view === "map" ? "filled" : "outlined"}
-                label={<Typography variant="subtitle2">Map View</Typography>}
-                icon={<MapTrifold size={20} weight="bold" />}
-              />
-              <Chip
-                onClick={() => {
-                  setView("card");
-                }}
-                sx={{ cursor: "pointer", p: 1 }}
-                color="primary"
-                variant={view === "card" ? "filled" : "outlined"}
-                label={<Typography variant="subtitle2">Card View</Typography>}
-                icon={<Columns size={20} weight="bold" />}
-              />
+           
             </Stack>
           </Grid>
         </Grid>
       </Box>
             
-       {view === 'map' ? 
-      <Box sx={{ width: "100%" }}>
-        <Grid container spacing={2}>
-          <Grid item md={6} xs={12}>
-            {/* card */}
-          </Grid>
-          <Grid item md={6} xs={12}>
-            {/* map */}
-          </Grid>
-        </Grid>
-      </Box>
-       
-       :
+    
        <CardView value={value}  handleChangeTab={handleChangeTab} />
-        }     
+        <Map {...baseSettings} data={COUNTRIES} /> 
     </Stack>
   );
 }
